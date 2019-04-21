@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
@@ -20,3 +20,11 @@ $ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+Deployment
+
+```
+$ gcloud builds submit --project "project-name" --config=./cloud-build.yaml
+
+$ gcloud beta run deploy cloud-run-name --region us-central1 --project "project-name" --image gcr.io/project-name/container-name
+```
